@@ -11,7 +11,7 @@ class RecycleMatrix(RootModel[List[List[int]]]):
     @classmethod
     def check_3x3(cls, v: List[List[int]]) -> List[List[int]]:
         if len(v) != 3 or any(len(row) != 3 for row in v):
-            raise ValueError('La matriz debe ser exactamente de 3x3 enteros')
+            raise ValueError('The matrix must be 3x3 integers')
         if not all(isinstance(item, int) for row in v for item in row):
-            raise ValueError('Todos los elementos de la matriz deben ser enteros')
+            raise ValueError('All elements must be integers')
         return v

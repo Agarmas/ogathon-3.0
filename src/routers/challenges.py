@@ -1,4 +1,3 @@
-from itertools import permutations
 from fastapi import APIRouter, Depends
 from src.services import challenges_service
 from src.models.challenges_models import QueryN, RecycleMatrix
