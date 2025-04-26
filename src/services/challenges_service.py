@@ -39,14 +39,13 @@ def count_end89(n: int) -> int:
 
 def recycling(matrix: list[list[int]]) -> int:
     total_items = [sum(row) for row in matrix]
-    total_types = [sum(matrix[i][j] for i in range(3)) for j in range(3)]
 
     min_moves = float('inf')
 
     for perm in permutations(range(3)):
         moves = 0
         for i in range(3):
-            moves += total_items[i] - matrix[i][perm[i]]
+            moves += total_items[i] - matrix[i][perm [i]]
         min_moves = min(min_moves, moves)
 
     return min_moves
