@@ -8,4 +8,4 @@ router = APIRouter(
 
 @router.get('/solution-1')
 async def get_challenge(n: int) -> int:
-    return challenges_service.calcular_desafio(n)
+    return challenges_service.virus_propagation(n)
